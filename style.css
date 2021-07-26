@@ -1,0 +1,136 @@
+/* RESET */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* STYLES GLOBAUX */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: whitesmoke;
+    margin: 2em 0;
+}
+
+form {
+    width: 100%;
+    margin: auto;
+    /* background-color: pink; */
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    position: relative;
+    width: 70%;
+}
+
+label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-style: italic;
+    opacity: .8;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: all .6s ease-in-out;
+}
+
+input {
+    padding: 1em .8em 1em 20px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.input-group:focus-within label,
+.input-group.active-input label {
+    top: -1em;
+    color: whitesmoke;
+}
+
+/* Style AFFICHAGE USER */
+.error {
+    display: none;
+    color: whitesmoke;
+}
+
+.display-user {
+    display: none;
+    position: relative;
+    width: 70%;
+    margin-top: 7em;
+    padding: 1em;
+    border: 1px solid whitesmoke;
+    transition: all .5s ease-in-out;
+}
+
+.avatar {
+    width: 150px;
+    border-radius: 9999px;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #333;
+    border: 3px solid whitesmoke;
+    transition: all .1s ease-in-out;
+}
+
+.display-user h2 {
+    margin: 3em auto .8em auto;
+    color: whitesmoke;
+}
+
+.display-user ul {
+    margin: .5em 0;
+    list-style: none;
+    border-top: 1px dotted whitesmoke;
+}
+
+.display-user ul li {
+    padding: 1em 0 1em 0;
+    color: whitesmoke;
+}
+
+.display-user ul li a {
+    color: whitesmoke;
+}
+
+.display-user ul li a:hover {
+    color: lightgray;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width:767px) {
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .input-group,
+    .display-user {
+        width: 95%;
+    }
+}
